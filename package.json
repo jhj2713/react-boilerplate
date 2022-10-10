@@ -5,6 +5,11 @@
   "repository": "https://github.com/jhj2713/react-boilerplate.git",
   "author": "juhyojeong <juhyojeong58@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "start": "NODE_ENV=production webpack-dev-server --config webpack.prod.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -12,6 +17,14 @@
   "devDependencies": {
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "typescript": "^4.8.4"
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   }
 }
