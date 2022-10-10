@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-const App = () => {
-  return (
-    <Container>
-      <Text>React Boilerplate</Text>
-    </Container>
-  );
-};
-
-export default App;
-
 const Container = styled.div`
   height: 100vh;
   width: 100vw;
@@ -19,8 +9,20 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Text = styled.p`
+const Text = styled.p<{ color: string }>`
   margin: 0;
 
-  color: #587cf7;
+  color: ${({ color }) => color};
 `;
+
+function App() {
+  return (
+    <Container>
+      <Text color="#587cf7">React</Text>
+      <Text color="#d2fa64">Boiler</Text>
+      <Text color="#ff6c45">plate</Text>
+    </Container>
+  );
+}
+
+export default App;
