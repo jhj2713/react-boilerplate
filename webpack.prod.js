@@ -4,13 +4,11 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 module.exports = merge(common, {
   mode: "production",
-  devtool: "source-map",
   devServer: {
-    static: "./dist",
     historyApiFallback: true,
     hot: true,
     compress: true,
-    port: 8000,
+    port: 9000,
   },
   plugins: [
     new BundleAnalyzerPlugin({
